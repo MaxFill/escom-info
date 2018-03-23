@@ -8,22 +8,17 @@ import java.util.logging.Logger;
 
 public final class ActualRelease implements Serializable{
     private static final long serialVersionUID = 8047333907746200457L;
-    
-    public static final String RELEASE_VERSION = "1.01";
-    public static final String RELEASE_NUMBER = "001";
-    public static final String RELEASE_DATE = "2017-06-01";
-    public static final String RELEASE_PAGE = "https://https://escom-archive.ru/#blogPage";
 
     private String number;
     private String date;
     private String page;
     private String version;
 
-    public ActualRelease() {
-        this.number = RELEASE_NUMBER;
-        this.date = RELEASE_DATE;
-        this.page = RELEASE_PAGE;
-        this.version = RELEASE_VERSION;
+    public ActualRelease(String number, String date, String page, String version) {
+        this.number = number;
+        this.date = date;
+        this.page = page;
+        this.version = version;
     }
 
     public String getNumber() {
@@ -58,7 +53,7 @@ public final class ActualRelease implements Serializable{
         ObjectMapper mapper = new ObjectMapper();
         String retVal = "";
         try {
-            retVal = mapper.writeValueAsString(this);            
+            retVal = mapper.writeValueAsString(this);
         } catch (IOException ex) {
             Logger.getLogger(ReleaseInfo.class.getName()).log(Level.SEVERE, null, ex);
         }
