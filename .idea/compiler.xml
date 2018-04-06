@@ -7,10 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="escom-bpm-info" />
+        <module name="escom-bpm-services" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="escom-bpm-info" target="1.7" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="escom-bpm-services" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

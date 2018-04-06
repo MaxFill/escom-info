@@ -6,7 +6,7 @@ import javax.websocket.OnMessage;
 import javax.websocket.server.ServerEndpoint;
 
 /* web socket ws://localhost:8090/escom-bpm-info-1.0-SNAPSHOT/release_info */
-@Stateful //аннотация добавлена чтобы была возможность ижекции EJB
+@Stateful //аннотация добавлена чтобы была возможность инжекции EJB
 @ServerEndpoint("/release_info")
 public class ReleaseInfoWS {
     @EJB
